@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shoe_shop_app/models/shoe_model.dart';
+import 'package:shoe_shop_app/screen/detail/detail_screen.dart';
 
 class ShoeBottomCard extends StatelessWidget {
   final ShoeModel data;
@@ -12,13 +13,13 @@ class ShoeBottomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navigator.of(context).push(
-        // MaterialPageRoute(
-        //   builder: (_) => DetailPage(
-        //     data,
-        //   ),
-        // ),
-        // );
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => DetailScreen(
+              shoeModel: data,
+            ),
+          ),
+        );
       },
       child: Container(
         margin: EdgeInsets.only(left: 16, right: 16, bottom: 10),

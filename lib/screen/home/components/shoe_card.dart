@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shoe_shop_app/models/shoe_model.dart';
+import 'package:shoe_shop_app/screen/detail/detail_screen.dart';
 import 'dart:math' as math;
 
 import 'background.dart';
@@ -16,13 +17,13 @@ class ShoeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navigator.of(context).push(
-        // MaterialPageRoute(
-        //   builder: (_) => DetailPage(
-        //     shoeList[index],
-        //   ),
-        // ),
-        // );
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => DetailScreen(
+              shoeModel: shoeList,
+            ),
+          ),
+        );
       },
       child: Container(
         width: 230,

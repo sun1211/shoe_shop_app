@@ -39,7 +39,9 @@ class Body extends StatelessWidget {
             physics: BouncingScrollPhysics(),
             padding: EdgeInsets.symmetric(horizontal: 16),
             itemBuilder: (context, index) {
-              return ShoeCard(shoeList: shoeList[index]);
+              return ShoeCard(
+                shoeList: shoeList[index],
+              );
             },
           ),
         ),
